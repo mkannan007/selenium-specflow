@@ -10,4 +10,3 @@ Scenario: Validation of adding and removing items in my cart
 	Then I should see total 4 items listed in my cart
 	When I search and remove the lowest price item from my cart
 	Then I should see total 3 items listed in my cart
-	#Then I am able to verify three items in my cart
