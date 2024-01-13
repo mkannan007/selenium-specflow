@@ -29,7 +29,5 @@ namespace WebTechTest.StepDefinitions
             Thread.Sleep(1000);
             cartPage.RemoveLowestPriceItem();
         }
-
-
     }
 }

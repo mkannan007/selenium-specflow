@@ -1,6 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using System.Configuration;
 
 namespace WebTechTest.PageObjects
 {
@@ -29,10 +27,6 @@ namespace WebTechTest.PageObjects
                 productQuantityList.Add(productQuantityValue);
             }
 
-            //string inputString = String.Join(",", productQuantityList);
-            //string[] elementsArray = inputString.Split(',');
-            //productQuantityList = new List<string>(elementsArray);
-
             return productQuantityList;
         }
         public int SumProductQuantity()
@@ -53,9 +47,6 @@ namespace WebTechTest.PageObjects
             {
                 productPriceList.Add(productPrice.Text);
             }
-            //string inputString = String.Join(",", productPriceList);
-            //string[] elementsArray = inputString.Split(',');
-            //productPriceList = new List<string>(elementsArray);
 
             return productPriceList;
         }
@@ -64,7 +55,7 @@ namespace WebTechTest.PageObjects
         {
             List<String> productPriceList = GetProductPriceList();
             int lowestPriceIndex = 0;
-            
+
 
             for (int i = 1; i < productPriceList.Count; i++)
             {
@@ -75,12 +66,11 @@ namespace WebTechTest.PageObjects
             }
 
             return lowestPriceIndex;
-            //ProductRows.ElementAt(lowestPriceIndex).FindElement(By.CssSelector("a[class*='remove']")).Click();
         }
 
         public void RemoveLowestPriceItem()
         {
-            ProductRows.ElementAt(GetLowestPriceItem()).FindElement(By.CssSelector("a[class*='remove']")).Click();
+            ProductRows.ElementAt(GetLowestPriceItem()).FindElement(By.ClassName("remove")).Click();
             Thread.Sleep(2000);
         }
     }
