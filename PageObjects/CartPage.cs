@@ -20,7 +20,7 @@ namespace SeleniumSpecflow.PageObjects
 
         public List<String> GetProductQuantityList()
         {
-            List<String> productQuantityList = new List<string>();
+            List<String> productQuantityList = new();
             foreach (IWebElement productQuantity in ProductQuantity)
             {
                 String productQuantityValue = productQuantity.FindElement(By.CssSelector("input[id*='quantity']")).GetAttribute("value");
@@ -42,7 +42,7 @@ namespace SeleniumSpecflow.PageObjects
 
         public List<String> GetProductPriceList()
         {
-            List<String> productPriceList = new List<String>();
+            List<String> productPriceList = new();
             foreach (IWebElement productPrice in ProductPrice)
             {
                 productPriceList.Add(productPrice.Text);
