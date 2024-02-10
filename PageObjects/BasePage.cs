@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace WebTechTest.PageObjects
+namespace SeleniumSpecflow.PageObjects
 {
     public class BasePage
     {

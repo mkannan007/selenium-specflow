@@ -1,7 +1,7 @@
 ﻿using BoDi;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-namespace WebTechTest.Hooks
+namespace SeleniumSpecflow.Hooks
 {
     [Binding]
     public sealed class Hooks

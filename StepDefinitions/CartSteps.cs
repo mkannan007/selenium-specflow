@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using WebTechTest.PageObjects;
+using SeleniumSpecflow.PageObjects;
 
-namespace WebTechTest.StepDefinitions
+namespace SeleniumSpecflow.StepDefinitions
 {
     [Binding]
     public sealed class CartSteps
